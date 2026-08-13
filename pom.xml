@@ -17,17 +17,134 @@
 
     <build>
         <plugins>
+            <!-- Plugin đóng gói file JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.12.1</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>vn.edu.eaut.lab1.App</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+
+                    <!-- Bài 01 -->
+                    <execution>
+                        <id>jar-bai01</id>
+                        <phase>package</phase>
+                        <goals><goal>jar</goal></goals>
+                        <configuration>
+                            <classifier>Bai01HelloSwing</classifier>
+                            <archive>
+                                <manifest>
+                                    <mainClass>vn.edu.eaut.lab3.Bai01HelloSwing</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+
+                    <!-- Bài 02 -->
+                    <execution>
+                        <id>jar-bai02</id>
+                        <phase>package</phase>
+                        <goals><goal>jar</goal></goals>
+                        <configuration>
+                            <classifier>Bai02TongHaiSo</classifier>
+                            <archive>
+                                <manifest>
+                                    <mainClass>vn.edu.eaut.lab3.Bai02TongHaiSo</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+
+                    <!-- Bài 03 -->
+                    <execution>
+                        <id>jar-bai03</id>
+                        <phase>package</phase>
+                        <goals><goal>jar</goal></goals>
+                        <configuration>
+                            <classifier>Bai03PhuongTrinhBacNhat</classifier>
+                            <archive>
+                                <manifest>
+                                    <mainClass>vn.edu.eaut.lab3.Bai03PhuongTrinhBacNhat</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+
+                    <!-- Bài 04 -->
+                    <execution>
+                        <id>jar-bai04</id>
+                        <phase>package</phase>
+                        <goals><goal>jar</goal></goals>
+                        <configuration>
+                            <classifier>Bai04TamGiacSwing</classifier>
+                            <archive>
+                                <manifest>
+                                    <mainClass>vn.edu.eaut.lab3.Bai04TamGiacSwing</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+
+                    <!-- Bài 05 -->
+                    <execution>
+                        <id>jar-bai05</id>
+                        <phase>package</phase>
+                        <goals><goal>jar</goal></goals>
+                        <configuration>
+                            <classifier>Bai05FibonacciSwing</classifier>
+                            <archive>
+                                <manifest>
+                                    <mainClass>vn.edu.eaut.lab3.Bai05FibonacciSwing</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+
+                    <!-- Bài 06 -->
+                    <execution>
+                        <id>jar-bai06</id>
+                        <phase>package</phase>
+                        <goals><goal>jar</goal></goals>
+                        <configuration>
+                            <classifier>Bai06LoginForm</classifier>
+                            <archive>
+                                <manifest>
+                                    <mainClass>vn.edu.eaut.lab3.Bai06LoginForm</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+
+                    <!-- Bài 07 -->
+                    <execution>
+                        <id>jar-bai07</id>
+                        <phase>package</phase>
+                        <goals><goal>jar</goal></goals>
+                        <configuration>
+                            <classifier>Bai07MayTinhMini</classifier>
+                            <archive>
+                                <manifest>
+                                    <mainClass>vn.edu.eaut.lab3.Bai07MayTinhMini</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+
+                    <!-- Bài 08 -->
+                    <execution>
+                        <id>jar-bai08</id>
+                        <phase>package</phase>
+                        <goals><goal>jar</goal></goals>
+                        <configuration>
+                            <classifier>Bai08QuanLySinhVien</classifier>
+                            <archive>
+                                <manifest>
+                                    <mainClass>vn.edu.eaut.lab3.Bai08QuanLySinhVien</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+
+                </executions>
             </plugin>
         </plugins>
     </build>
