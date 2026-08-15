@@ -30,10 +30,10 @@
                         <phase>package</phase>
                         <goals><goal>jar</goal></goals>
                         <configuration>
-                            <classifier>Bai01HelloSwing</classifier>
+                            <classifier>Bai01</classifier>
                             <archive>
                                 <manifest>
-                                    <mainClass>vn.edu.eaut.lab3.Bai01HelloSwing</mainClass>
+                                    <mainClass>vn.edu.eaut.lab4.CountdownFrame</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
@@ -45,10 +45,10 @@
                         <phase>package</phase>
                         <goals><goal>jar</goal></goals>
                         <configuration>
-                            <classifier>Bai02TongHaiSo</classifier>
+                            <classifier>Bai02</classifier>
                             <archive>
                                 <manifest>
-                                    <mainClass>vn.edu.eaut.lab3.Bai02TongHaiSo</mainClass>
+                                    <mainClass>vn.edu.eaut.lab4.FibonacciFrame</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
@@ -60,10 +60,10 @@
                         <phase>package</phase>
                         <goals><goal>jar</goal></goals>
                         <configuration>
-                            <classifier>Bai03PhuongTrinhBacNhat</classifier>
+                            <classifier>Bai03</classifier>
                             <archive>
                                 <manifest>
-                                    <mainClass>vn.edu.eaut.lab3.Bai03PhuongTrinhBacNhat</mainClass>
+                                    <mainClass>vn.edu.eaut.lab4.FileLineCounterFrame</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
@@ -75,10 +75,10 @@
                         <phase>package</phase>
                         <goals><goal>jar</goal></goals>
                         <configuration>
-                            <classifier>Bai04TamGiacSwing</classifier>
+                            <classifier>Bai04</classifier>
                             <archive>
                                 <manifest>
-                                    <mainClass>vn.edu.eaut.lab3.Bai04TamGiacSwing</mainClass>
+                                    <mainClass>vn.edu.eaut.lab4.PrimeSumFrame</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
@@ -90,55 +90,10 @@
                         <phase>package</phase>
                         <goals><goal>jar</goal></goals>
                         <configuration>
-                            <classifier>Bai05FibonacciSwing</classifier>
+                            <classifier>Bai05</classifier>
                             <archive>
                                 <manifest>
-                                    <mainClass>vn.edu.eaut.lab3.Bai05FibonacciSwing</mainClass>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </execution>
-
-                    <!-- Bài 06 -->
-                    <execution>
-                        <id>jar-bai06</id>
-                        <phase>package</phase>
-                        <goals><goal>jar</goal></goals>
-                        <configuration>
-                            <classifier>Bai06LoginForm</classifier>
-                            <archive>
-                                <manifest>
-                                    <mainClass>vn.edu.eaut.lab3.Bai06LoginForm</mainClass>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </execution>
-
-                    <!-- Bài 07 -->
-                    <execution>
-                        <id>jar-bai07</id>
-                        <phase>package</phase>
-                        <goals><goal>jar</goal></goals>
-                        <configuration>
-                            <classifier>Bai07MayTinhMini</classifier>
-                            <archive>
-                                <manifest>
-                                    <mainClass>vn.edu.eaut.lab3.Bai07MayTinhMini</mainClass>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </execution>
-
-                    <!-- Bài 08 -->
-                    <execution>
-                        <id>jar-bai08</id>
-                        <phase>package</phase>
-                        <goals><goal>jar</goal></goals>
-                        <configuration>
-                            <classifier>Bai08QuanLySinhVien</classifier>
-                            <archive>
-                                <manifest>
-                                    <mainClass>vn.edu.eaut.lab3.Bai08QuanLySinhVien</mainClass>
+                                    <mainClass>vn.edu.eaut.lab4.ProgressDemoFrame</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
