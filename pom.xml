@@ -2,104 +2,49 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                                http://maven.apache.org/xsd/maven-4.0.0.xsd">
+https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>vn.edu.eaut</groupId>
-    <artifactId>lab01-java-console</artifactId>
+    <artifactId>lab06-student-web</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>war</packaging>
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet.jsp.jstl</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+    </dependencies>
     <build>
+        <finalName>lab06-student-web</finalName>
+
         <plugins>
-            <!-- Plugin đóng gói file JAR -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.3.0</version>
-                <executions>
-
-                    <!-- Bài 01 -->
-                    <execution>
-                        <id>jar-bai01</id>
-                        <phase>package</phase>
-                        <goals><goal>jar</goal></goals>
-                        <configuration>
-                            <classifier>Bai01</classifier>
-                            <archive>
-                                <manifest>
-                                    <mainClass>vn.edu.eaut.lab4.CountdownFrame</mainClass>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </execution>
-
-                    <!-- Bài 02 -->
-                    <execution>
-                        <id>jar-bai02</id>
-                        <phase>package</phase>
-                        <goals><goal>jar</goal></goals>
-                        <configuration>
-                            <classifier>Bai02</classifier>
-                            <archive>
-                                <manifest>
-                                    <mainClass>vn.edu.eaut.lab4.FibonacciFrame</mainClass>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </execution>
-
-                    <!-- Bài 03 -->
-                    <execution>
-                        <id>jar-bai03</id>
-                        <phase>package</phase>
-                        <goals><goal>jar</goal></goals>
-                        <configuration>
-                            <classifier>Bai03</classifier>
-                            <archive>
-                                <manifest>
-                                    <mainClass>vn.edu.eaut.lab4.FileLineCounterFrame</mainClass>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </execution>
-
-                    <!-- Bài 04 -->
-                    <execution>
-                        <id>jar-bai04</id>
-                        <phase>package</phase>
-                        <goals><goal>jar</goal></goals>
-                        <configuration>
-                            <classifier>Bai04</classifier>
-                            <archive>
-                                <manifest>
-                                    <mainClass>vn.edu.eaut.lab4.PrimeSumFrame</mainClass>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </execution>
-
-                    <!-- Bài 05 -->
-                    <execution>
-                        <id>jar-bai05</id>
-                        <phase>package</phase>
-                        <goals><goal>jar</goal></goals>
-                        <configuration>
-                            <classifier>Bai05</classifier>
-                            <archive>
-                                <manifest>
-                                    <mainClass>vn.edu.eaut.lab4.ProgressDemoFrame</mainClass>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </execution>
-
-                </executions>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven3-plugin</artifactId>
+                <version>1.10.7</version>
+                <configuration>
+                    <container>
+                        <containerId>tomcat10x</containerId>
+                        <type>embedded</type>
+                    </container>
+                </configuration>
             </plugin>
         </plugins>
     </build>
