@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="jakarta.faces.html" xmlns:f="jakarta.faces.core" xmlns:ui="jakarta.faces.facelets">
+<ui:composition template="/templates/layout.xhtml">
+<ui:define name="title">Sách</ui:define>
+<ui:define name="content">
+<div class="card"><h2>Thêm sách</h2><h:messages globalOnly="true"/>
+<h:form>
+<div class="form-grid">
+<h:outputLabel for="ten" value="Tên sách"/><div><h:inputText id="ten" value="#{sachBean.sach.tenSach}" required="true"/><h:message for="ten" styleClass="error"/></div>
+<h:outputLabel for="tg" value="Tác giả"/><div><h:inputText id="tg" value="#{sachBean.sach.tacGia}" required="true"/><h:message for="tg" styleClass="error"/></div>
+<h:outputLabel for="nam" value="Năm xuất bản"/><div><h:inputText id="nam" value="#{sachBean.sach.namXuatBan}" required="true"/><h:message for="nam" styleClass="error"/></div>
+</div><br/><h:commandButton value="Lưu sách" action="#{sachBean.save}"/>
+</h:form></div>
+<div class="card"><h2>Danh sách sách</h2>
+<h:dataTable value="#{sachBean.dsSach}" var="s">
+<h:column><f:facet name="header">ID</f:facet>#{s.id}</h:column>
+<h:column><f:facet name="header">Tên sách</f:facet>#{s.tenSach}</h:column>
+<h:column><f:facet name="header">Tác giả</f:facet>#{s.tacGia}</h:column>
+<h:column><f:facet name="header">Năm</f:facet>#{s.namXuatBan}</h:column>
+</h:dataTable></div>
+</ui:define></ui:composition></html>

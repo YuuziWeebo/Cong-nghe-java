@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="jakarta.faces.html" xmlns:ui="jakarta.faces.facelets">
+<ui:composition template="/templates/layout.xhtml">
+<ui:define name="title">Đăng nhập</ui:define>
+<ui:define name="content">
+<div class="card">
+<h2>Đăng nhập</h2>
+<h:messages globalOnly="true" errorClass="msg error"/>
+<h:form>
+<div class="form-grid">
+<h:outputLabel for="u" value="Tài khoản"/><h:inputText id="u" value="#{loginBean.username}" required="true"/>
+<h:outputLabel for="p" value="Mật khẩu"/><h:inputSecret id="p" value="#{loginBean.password}" required="true"/>
+</div><br/><h:commandButton value="Đăng nhập" action="#{loginBean.login}"/>
+</h:form>
+<p>Tài khoản mẫu: <b>admin</b> / <b>123456</b></p>
+</div>
+</ui:define>
+</ui:composition></html>

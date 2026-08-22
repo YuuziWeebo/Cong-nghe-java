@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:ui="jakarta.faces.facelets">
+<ui:composition template="/templates/layout.xhtml">
+    <ui:define name="title">Trang chủ</ui:define>
+    <ui:define name="content">
+        <div class="card">
+            <h1>Lab 8 - JSF 12 bài</h1>
+            <p>Jakarta Faces + CDI + Bean Validation + MySQL.</p>
+            <p><h:link styleClass="btn" outcome="/sinhvien-list" value="Quản lý sinh viên"/></p>
+        </div>
+    </ui:define>
+</ui:composition>
+</html>
