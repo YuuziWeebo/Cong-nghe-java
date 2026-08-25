@@ -1,0 +1,1 @@
+package vn.edu.eaut.lab9.controller;import jakarta.servlet.annotation.*;import jakarta.servlet.http.*;import vn.edu.eaut.lab9.service.SeedData;import java.io.*;@WebServlet("/seed") public class HomeController extends HttpServlet{protected void doGet(HttpServletRequest r,HttpServletResponse p)throws IOException{SeedData.init();p.sendRedirect("index.jsp");}}
