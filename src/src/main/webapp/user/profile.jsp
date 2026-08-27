@@ -1,0 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %><%@ page import="vn.edu.eaut.lab10.model.User" %><%User u=(User)session.getAttribute("currentUser");%>
+<!DOCTYPE html><html><head><title>Hồ sơ</title><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/style.css"></head><body><div class="wrap"><a href="../dashboard.jsp">← Dashboard</a><h2>Hồ sơ cá nhân</h2>
+<%if(request.getAttribute("ok")!=null){%><p class="ok"><%=request.getAttribute("ok")%></p><%}%>
+<form method="post"><label>Họ tên</label><input name="fullName" value="<%=u.getFullName()%>" required><label>Email</label><input type="email" name="email" value="<%=u.getEmail()%>" required><button>Lưu thay đổi</button></form></div></body></html>

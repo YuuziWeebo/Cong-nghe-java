@@ -1,0 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html><html><head><title>Đổi mật khẩu</title><link rel="stylesheet" href="${pageContext.request.contextPath}/assets/style.css"></head><body><div class="wrap"><a href="../dashboard.jsp">← Dashboard</a><h2>Đổi mật khẩu</h2>
+<%if(request.getAttribute("error")!=null){%><p class="error"><%=request.getAttribute("error")%></p><%}%><%if(request.getAttribute("ok")!=null){%><p class="ok"><%=request.getAttribute("ok")%></p><%}%>
+<form method="post"><label>Mật khẩu cũ</label><input type="password" name="oldPassword" required><label>Mật khẩu mới</label><input type="password" name="newPassword" minlength="6" required><label>Xác nhận</label><input type="password" name="confirmPassword" minlength="6" required><button>Đổi mật khẩu</button></form></div></body></html>

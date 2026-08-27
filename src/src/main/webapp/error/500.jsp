@@ -1,0 +1,1 @@
+<%@ page contentType="text/html;charset=UTF-8" %><!DOCTYPE html><html><body><h1>500 - Lỗi máy chủ</h1><p>Đã xảy ra lỗi. Vui lòng thử lại.</p><a href="../dashboard.jsp">Về Dashboard</a></body></html>

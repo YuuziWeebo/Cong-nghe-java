@@ -1,0 +1,1 @@
+<%@ page contentType="text/html;charset=UTF-8" %><!DOCTYPE html><html><body><h1>404 - Không tìm thấy trang</h1><a href="../dashboard.jsp">Về Dashboard</a></body></html>
