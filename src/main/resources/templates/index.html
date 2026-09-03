@@ -1,0 +1,4 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title th:text="${title}">Trang chủ</title><link rel="stylesheet" th:href="@{/css/style.css}"></head>
+<body><div th:replace="~{fragments :: navbar}"></div><main class="hero"><div class="badge">SPRING BOOT · THYMELEAF</div><h1 th:text="${message}">Chào mừng</h1><p>Ứng dụng mẫu quản lý sinh viên được xây dựng trong Lab 11 - Chương 4.</p><div class="actions"><a class="btn" th:href="@{/students}">Xem sinh viên →</a><a class="btn secondary" th:href="@{/courses}">Xem khóa học</a></div></main><section class="cards"><div><b>Spring MVC</b><span>Controller · Model · View</span></div><div><b>Thymeleaf</b><span>Template HTML động</span></div><div><b>Maven</b><span>Quản lý dependency & build</span></div></section><div th:replace="~{fragments :: footer}"></div></body></html>

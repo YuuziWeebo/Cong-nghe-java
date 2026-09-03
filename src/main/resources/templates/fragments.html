@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<nav th:fragment="navbar" class="navbar">
+    <div class="brand"><span>☕</span> Lab 11</div>
+    <div class="links">
+        <a th:href="@{/}">Home</a><a th:href="@{/about}">About</a>
+        <a th:href="@{/students}">Students</a><a th:href="@{/courses}">Courses</a><a th:href="@{/contact}">Contact</a>
+    </div>
+</nav>
+<footer th:fragment="footer"><p>Lab 11 · Công nghệ Java · Spring Boot + Thymeleaf</p></footer>
+</body>
+</html>
