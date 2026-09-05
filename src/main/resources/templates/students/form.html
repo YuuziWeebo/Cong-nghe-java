@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org"><head><meta charset="UTF-8"><title th:text="${formTitle}">Form</title>
+<style>body{font-family:Arial;max-width:650px;margin:40px auto;background:#f7f7f7}.card{background:#fff;padding:25px;border-radius:10px}label{display:block;margin-top:14px}input{width:100%;box-sizing:border-box;padding:9px;margin-top:5px}.err{color:#c00;font-size:14px}button,a{margin-top:18px;padding:9px 13px;border:0;border-radius:5px;text-decoration:none}button{background:#2563eb;color:white}</style></head>
+<body><div class="card"><h1 th:text="${formTitle}"></h1>
+<form th:action="@{/students/save}" th:object="${student}" method="post">
+<input type="hidden" th:field="*{id}">
+<label>Mã sinh viên</label><input type="text" th:field="*{studentCode}"><div class="err" th:errors="*{studentCode}"></div>
+<label>Họ tên</label><input type="text" th:field="*{fullName}"><div class="err" th:errors="*{fullName}"></div>
+<label>Email</label><input type="email" th:field="*{email}"><div class="err" th:errors="*{email}"></div>
+<label>Lớp</label><input type="text" th:field="*{className}"><div class="err" th:errors="*{className}"></div>
+<button type="submit">Lưu</button> <a th:href="@{/students}">Hủy</a>
+</form></div></body></html>

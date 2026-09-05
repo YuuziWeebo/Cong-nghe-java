@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org"><head><meta charset="UTF-8"><title>Chi tiết sinh viên</title>
+<style>body{font-family:Arial;max-width:650px;margin:40px auto;background:#f7f7f7}.card{background:white;padding:25px;border-radius:10px}dt{font-weight:bold;margin-top:12px}dd{margin-left:0}</style></head>
+<body><div class="card"><h1>Chi tiết sinh viên</h1>
+<dl><dt>ID</dt><dd th:text="${student.id}"></dd><dt>Mã sinh viên</dt><dd th:text="${student.studentCode}"></dd>
+<dt>Họ tên</dt><dd th:text="${student.fullName}"></dd><dt>Email</dt><dd th:text="${student.email}"></dd><dt>Lớp</dt><dd th:text="${student.className}"></dd></dl>
+<a th:href="@{/students}">← Quay lại</a> <a th:href="@{/students/edit/{id}(id=${student.id})}">Sửa</a>
+</div></body></html>
